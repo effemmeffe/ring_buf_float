@@ -15,7 +15,7 @@ struct ring_buf_t
 	bool full;
 };
 
-#pragma mark - Ring buffers allocation -
+// MARK: - Ring buffers allocation -
 //=====================================================================================
 //
 // Ring buffers allocation
@@ -25,7 +25,7 @@ struct ring_buf_t
 ring_buf_t rbuf_array[MAX_RBUFS];
 uint16_t rbufs_number;
 
-#pragma mark - Private Functions -
+// MARK: - Private Functions -
 
 static inline size_t advance_headtail_value(size_t value, size_t max)
 {
@@ -50,7 +50,7 @@ static void advance_head_pointer(rbuf_handle_t me)
 	me->full = (me->head == me->tail);
 }
 
-#pragma mark - APIs -
+// MARK: - APIs -
 rbuf_handle_t ring_buf_static_init(float_t* buffer, size_t size)
 {
     assert(buffer && size);
